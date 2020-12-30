@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Healthy Fresh Microgreens</title>
+    <title>Healthy Fresh Microgreens Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
 
@@ -15,7 +15,7 @@
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <link href="../static/carousel.css" rel="stylesheet">
   </head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,9 +25,9 @@
 
     <header>
       <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{url_for('home')}}">
           <div class="logo-image">
-                <img src="LOGO7.jpg" class="img-fluid">
+                <img src="../static/LOGO7.jpg" class="img-fluid">
           </div> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,13 +35,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#Our microgreens section">Our Microgreens <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ url_for('.home', _anchor='Our microgreens section') }}">Our Microgreens <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#order section">Order</a>
+              <a class="nav-link"  href="{{ url_for('.home', _anchor='order section') }}">Order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="index2.html">About us</a>
+              <a class="nav-link disabled" href="{{url_for('about')}}">About us</a>
             </li>
           </ul>
 <!--          <form class="form-inline mt-2 mt-md-0">
@@ -62,7 +62,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="28.jpg" alt="First slide">
+            <img class="first-slide" src="../static/28.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1></h1>
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="29.jpg" alt="Second slide">
+            <img class="second-slide" src="../static/29.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1></h1>
@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="27.jpg" alt="Third slide">
+            <img class="third-slide" src="../static/27.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1></h1>
@@ -118,20 +118,20 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="Radish_pic.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="../static/Radish_pic.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Radish</h2>
             <p>Radish microgreens contain a high concentration of Vitamin B3, B6, C, Folate, and traces of Manganese. They are also abundant in Vitamin A, K, and E, iron, potassium, phosphorus, beta carotenes, calcium, magnesium, pantothenic acid and zinc.</p>
             <p><a class="btn btn-secondary" href="#order section" role="button"> Price: $5/50g <br> Click here to order
                </a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="Sun_pic.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="../static/Sun_pic.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Sunflower</h2>
             <p>Sunflower microgreens are a great source of calcium and iron. One serving has about 2% of your daily calcium needs and 8% of your daily iron needs.They’re also high in fiber and contain a wide range of other vitamins and minerals including Vitamin A, B, C, D, and E. </p>
             <p><a class="btn btn-secondary" href="#order section" role="button">Price: $5/100g <br> Click here to order</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="Pea_pic.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="../static/Pea_pic.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Pea Shoots</h2>
             <p>All microgreens are positively packed with vitamins, and pea shoots are no exception. Their nutrition values include beta-carotene – which our bodies convert into vitamin A, vitamin C, folate–which is an essential building block for the human body, and fiber.</p>
             <p><a class="btn btn-secondary" href="#order section" role="button">Price: $5/100g <br> Click here to order </a></p>
@@ -159,7 +159,7 @@ Microgreens are packed with nutrients, vitamins, minerals and enzymes. They are 
 </p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="pic10.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="../static/pic10.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -171,7 +171,7 @@ Microgreens are packed with nutrients, vitamins, minerals and enzymes. They are 
             <p class="lead">Our produce are naturally fresh because we deliver only harvest-to-order microgreens, thus you get the benefits of higher quality and flavorful taste.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="25.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="../static/25.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -183,7 +183,7 @@ Microgreens are packed with nutrients, vitamins, minerals and enzymes. They are 
             <p class="lead">We deliver weekly, year round. All of our microgreens are specially produced for each order and delivered weekly to home, work and restaurants. <a href="#order section"> Contact us for more information.</a></p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="23.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="../static/23.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
