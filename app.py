@@ -21,7 +21,7 @@ def home():
 @app.route('/microgreens_section')
 def microgreens_section():
     # Connecting to a template (html file)
-    return render_template('home.html #Our microgreens section')
+    return render_template('home.html, Our microgreens section')
 
 
 if __name__ == '__main__':
